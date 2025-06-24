@@ -83,6 +83,14 @@ aside {
     color: var(--main-color);
 }
 
+footer {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    color: gray;
+    font-size: 12px;
+}
+
 /* MAIN(KONTEN UTAMA WEB) */
 section {
     position: relative;
