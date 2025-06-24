@@ -27,7 +27,7 @@ aside {
     width: 300px;
     height: 100vh;
     padding: 20px;
-    z-index: 100;
+    z-index: 2;
 }
 
 .brand {
@@ -84,11 +84,11 @@ aside {
 }
 
 /* MAIN(KONTEN UTAMA WEB) */
-
 section {
     position: relative;
     min-height: 100vh;
     padding: 20px 20px 20px 320px;
+    z-index: 1;
 }
 
 .header-section {
@@ -153,6 +153,67 @@ section {
     padding-top: 10px;
 }
 
+/* INFORMASI */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 3;
+}
+
+.information {
+    position: absolute;
+    top: 20%;
+    left: 35%;
+    background-color: white;
+    width: 500px;
+    min-height: fit-content;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 4;
+}
+
+.information-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+    font-size: 12px;
+}
+
+.information-header span {
+    background-color: orange;
+    padding: 3px 10px;
+    border-radius: 5px;  
+}
+
+.information-header button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: red;
+    font-size: 20px;
+    cursor: pointer;
+    pointer-events: auto;
+}
+
+.information-content h1, .information-content h2 {
+    font-size: 1.5em;
+}
+
+.information-content h5 {
+    font-size: 13px;
+    padding: 10px 0 5px 0;
+}
+
+.information-content ul {
+    list-style: none;
+    font-size: 13px;
+}
 
 /* RESPONSIVE STYLES */
 @media (max-width: 768px) {
@@ -192,5 +253,10 @@ section {
 
     .form-actions {
         justify-content: center;
+    }
+
+    .information {
+        width: 95%;
+        left: 10px;
     }
 }
