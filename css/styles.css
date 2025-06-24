@@ -83,13 +83,17 @@ aside {
     color: var(--main-color);
 }
 
-footer {
+.footer-sidebar {
     position: absolute;
     left: 20px;
     bottom: 20px;
+}
+
+footer {
     color: gray;
     font-size: 12px;
 }
+
 
 /* MAIN(KONTEN UTAMA WEB) */
 section {
@@ -223,6 +227,11 @@ section {
     font-size: 13px;
 }
 
+/* FOOTER */
+.footer {
+    display: none;
+}
+
 /* RESPONSIVE STYLES */
 @media (max-width: 768px) {
     /* SIDEBAR */
@@ -243,6 +252,10 @@ section {
 
     .nav-menu button {
         text-align: center;
+    }
+
+    .footer-sidebar {
+        display: none;
     }
 
     /* MAIN(KONTEN UTAMA) */
@@ -266,5 +279,10 @@ section {
     .information {
         width: 95%;
         left: 10px;
+    }
+
+    /* FOOTER */
+    .footer {
+        display: block;
     }
 }
