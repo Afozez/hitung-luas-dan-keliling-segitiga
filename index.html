@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hitung Luas dan Keliling Segitiga</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <aside>
+        <div class="brand">
+            <img src="images/logo.png" alt="logo.png" width="25px">
+            <h1>Segi<span>Hitung</span></h1>
+        </div>
+
+        <h2 class="nav-title">Konversi</h2>
+
+        <div class="nav-menu">
+            <button onclick="navAreaTriangle()" class="btn-area-triangle">Luas Segitiga</button>
+            <button onclick="navCircumferenceTriangle()" class="btn-circumference-triangle">Keliling Segitiga</button>
+        </div>
+    </aside>
+
+    <main>
+        <section id="area-triangle">
+            <div class="header-section">
+                <h3>Hitung Luas Segitiga</h3>    
+            </div>
+
+            <form class="form-count-triangles" id="form-area-triangle">
+                <input type="text" placeholder="Panjang alas" id="base">
+                <input type="text" placeholder="Tinggi" id="height">
+                <span class="error-message" id="error-message-area"></span>
+
+                <div class="form-actions">
+                    <button type="submit">Hitung</button>
+                    <button onclick="resetFormAndResult()" type="button">Reset</button>
+                </div>
+            </form>
+
+            <ul class="result result-area"></ul>
+
+            <div class="formula">
+                <p>Rumus Luas Segitiga yaitu : <strong>L = 1/2 x a x t</strong></p>
+
+                <ul style="list-style: none;">
+                    <li>Dimana</li>
+                    <li><strong>L</strong> = Luas</li>
+                    <li><strong>a</strong> = Panjang Alas</li>
+                    <li><strong>t</strong> = Tinggi</li>
+                </ul>
+            </div>
+        </section>
+        
+        <section id="circumference-triangle">
+            <div class="header-section">
+                <h3>Hitunga Keliling Segitiga</h3>    
+            </div>
+
+            <form class="form-count-triangles" id="form-circumference-triangle">
+                <input type="text" placeholder="Sisi A" id="side-a">
+                <input type="text" placeholder="Sisi B" id="side-b">
+                <input type="text" placeholder="Sisi C" id="side-c">
+                <span class="error-message" id="error-message-circumference"    ></span>
+
+                <div class="form-actions">
+                    <button type="submit">Hitung</button>
+                    <button onclick="resetFormAndResult()" type="reset">Reset</button>
+                </div>
+            </form>
+
+            <ul class="result result-circumference"></ul>
+
+            <div class="formula">
+                <p>Rumus Keliling Segitiga yaitu : <strong>K = a + b + c</strong></p>
+                <p>Dimana</p>
+                <ul style="list-style: none;">
+                    <li><strong>K</strong> = Keliling</li>
+                    <li><strong>a</strong> = Sisi A</li>
+                    <li><strong>b</strong> = Sisi B</li>
+                    <li><strong>c</strong> = Sisi C</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    
+    <script src="js/main.js"></script>
+</body>
+</html>
