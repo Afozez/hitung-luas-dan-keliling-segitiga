@@ -46,7 +46,7 @@ const calculateArea = () => {
     const baseValue = parseFloat(base.value);
     const heightValue = parseFloat(height.value);
 
-    if(!baseValue || !heightValue) {
+    if(!baseValue || !heightValue || isNaN(baseValue) || isNaN(heightValue)) {
         handleError("area", "Masukkan nilai alas dan tinggi segitiga!");
         return;
     }else {
@@ -84,7 +84,7 @@ const calculateCircumference = () => {
     const sideBValue = parseFloat(sideB.value);
     const sideCValue = parseFloat(sideC.value);
 
-    if(!sideAValue || !sideBValue || !sideCValue) {
+    if(!sideAValue || !sideBValue || !sideCValue || isNaN(sideAValue) || isNaN(sideBValue) || isNaN(sideCValue)) {
         handleError("circumference", "Masukkan nilai semua sisi segitiga!");
         return;
     }else {
@@ -117,4 +117,14 @@ const resetFormAndResult = () => {
     resultCircumference.innerHTML = "";
     handleError("area", "");
     handleError("circumference", "");
+}
+
+// ========================
+// CLOSE INFORMATION
+// ========================
+const closeInformation = () => {
+    const information = document.querySelector(".information");
+    const overlay = document.querySelector(".overlay");
+    overlay.classList.remove("overlay");
+    information.style.display = "none";
 }
