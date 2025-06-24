@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hitung Luas dan Keliling Segitiga</title>
     <link rel="stylesheet" href="css/styles.css">
+    <script src="https://kit.fontawesome.com/2f4686a27c.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <aside>
@@ -16,12 +17,40 @@
         <h2 class="nav-title">Konversi</h2>
 
         <div class="nav-menu">
-            <button onclick="navAreaTriangle()" class="btn-area-triangle">Luas Segitiga</button>
-            <button onclick="navCircumferenceTriangle()" class="btn-circumference-triangle">Keliling Segitiga</button>
+            <button onclick="navAreaTriangle()" class="btn-area-triangle">
+                <i class="fa fa-ruler-combined"></i>
+                Luas Segitiga
+            </button>
+            <button onclick="navCircumferenceTriangle()" class="btn-circumference-triangle">
+                <i class="fa fa-ruler"></i>
+                Keliling Segitiga
+            </button>
         </div>
     </aside>
 
     <main>
+        <div class="overlay"></div>
+        <section class="information" id="information">
+            <div class="information-header">
+                <span>Informasi</span>
+                <button id="close-information" onclick="closeInformation()">
+                    <i class="fa fa-xmark"></i>
+                </button>
+            </div>
+
+            <div class="information-content">
+                <h1>Selamat Datang di SegiHitung</h1>
+                <h2>Hitung Luas dan Keliling Segitiga</h2>
+                <h5>Langkah-langkah :</h5>
+                <ul>
+                    <li>1. Pilih menu di sebelah kiri untuk menghitung luas atau keliling segitiga.</li>
+                    <li>2. Masukkan panjang alas dan tinggi untuk menghitung luas segitiga.</li>
+                    <li>3. Masukkan panjang ketiga sisi segitiga untuk menghitung keliling segitiga.</li>
+                    <li>4. Klik tombol hitung untuk mendapatkan hasilnya.</li>
+                </ul>
+            </div>
+        </section>
+
         <section id="area-triangle">
             <div class="header-section">
                 <h3>Hitung Luas Segitiga</h3>    
