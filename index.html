@@ -4,11 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hitung Luas dan Keliling Segitiga</title>
+
+    <!-- Icon web dan Css eksternal -->
+    <link rel="icon" href="images/logo.png">
     <link rel="stylesheet" href="css/styles.css">
+
+     <!-- CDN Fontawsome -->
     <script src="https://kit.fontawesome.com/2f4686a27c.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <!--   == SIDEBAR ==   -->
     <aside>
+        <!--     Logo     -->
         <div class="brand">
             <img src="images/logo.png" alt="logo.png" width="25px">
             <h1>Segi<span>Hitung</span></h1>
@@ -16,6 +23,7 @@
 
         <h2 class="nav-title">Konversi</h2>
 
+        <!--    Navigasi Menu      -->
         <div class="nav-menu">
             <button onclick="navAreaTriangle()" class="btn-area-triangle">
                 <i class="fa fa-ruler-combined"></i>
@@ -26,11 +34,21 @@
                 Keliling Segitiga
             </button>
         </div>
+
+        <!-- FOOTER -->
+        <footer>
+            <p>&copy; 2025 SegiHitung</p>
+        </footer>
     </aside>
 
+    <!--   KONTEN UTAMA/MAIN   -->
     <main>
+        <!--    Overlay untuk menutup beberapa componenets ketika pertama kali masuk web     -->
         <div class="overlay"></div>
+
+        <!--    Section sambutan dan langka-langka mengunakan web segi hitung      -->
         <section class="information" id="information">
+            <!-- Informasi header -->
             <div class="information-header">
                 <span>Informasi</span>
                 <button id="close-information" onclick="closeInformation()">
@@ -38,6 +56,7 @@
                 </button>
             </div>
 
+            <!-- Informasi konten utama -->
             <div class="information-content">
                 <h1>Selamat Datang di SegiHitung</h1>
                 <h2>Hitung Luas dan Keliling Segitiga</h2>
@@ -51,11 +70,14 @@
             </div>
         </section>
 
+        <!-- Section hitung luas segitiga -->
         <section id="area-triangle">
+            <!-- Judul section -->
             <div class="header-section">
                 <h3>Hitung Luas Segitiga</h3>    
             </div>
 
+            <!-- Form input alas dan tinggi -->
             <form class="form-count-triangles" id="form-area-triangle">
                 <input type="text" placeholder="Panjang alas" id="base">
                 <input type="text" placeholder="Tinggi" id="height">
@@ -67,8 +89,10 @@
                 </div>
             </form>
 
+            <!-- Hasil -->
             <ul class="result result-area"></ul>
 
+            <!-- Rumus -->
             <div class="formula">
                 <p>Rumus Luas Segitiga yaitu : <strong>L = 1/2 x a x t</strong></p>
 
@@ -80,12 +104,15 @@
                 </ul>
             </div>
         </section>
-        
+
+         <!-- Section hitung keliling segitiga -->
         <section id="circumference-triangle">
+             <!-- Judul Section -->
             <div class="header-section">
-                <h3>Hitunga Keliling Segitiga</h3>    
+                <h3>Hitung Keliling Segitiga</h3>    
             </div>
 
+             <!-- Form input Sisi A, Sisi B, dan Sisi C -->
             <form class="form-count-triangles" id="form-circumference-triangle">
                 <input type="text" placeholder="Sisi A" id="side-a">
                 <input type="text" placeholder="Sisi B" id="side-b">
@@ -98,8 +125,10 @@
                 </div>
             </form>
 
+             <!-- Hasil -->
             <ul class="result result-circumference"></ul>
 
+             <!-- Rumus -->
             <div class="formula">
                 <p>Rumus Keliling Segitiga yaitu : <strong>K = a + b + c</strong></p>
                 <p>Dimana</p>
@@ -113,7 +142,7 @@
         </section>
     </main>
 
-    
+     <!-- Javascript eksternal -->
     <script src="js/main.js"></script>
 </body>
 </html>
